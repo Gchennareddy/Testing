@@ -121,6 +121,14 @@
     </dependencies>
     <build>
         <plugins>
+	    <plugin>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>3.10.1</version>
+               <configuration>
+                  <fork>true</fork>
+		  <executable>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.el7_9.x86_64/jre/bin/java</executable>
+               </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -154,14 +162,6 @@
 		            </execution>
 		        </executions>
 		    </plugin>
-            <plugin>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>3.10.1</version>
-               <configuration>
-                  <fork>true</fork>
-		  <executable>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.el7_9.x86_64/jre/bin/java</executable>
-               </configuration>
-            </plugin>
         </plugins>
     </build>
 </project>
